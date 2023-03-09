@@ -74,11 +74,11 @@ module.exports = script = async (client, m, chatUpdate, store) => {
         case "help":
         case "menu":
           m.reply(`*Whatsapp Bot OpenAI*
-            🔊Alex by Professor
-          📌Commands 
+            🔊Rebuild by ALPHA
+          📌 Commands 
           1. /ai
           2. /img 
-*(KnightGPT)*
+*( CHATGPT )*
 Cmd: ${prefix}ai 
 🔎For Searching anything.
 ✅Join https://t.me/chatgpt04 \n
@@ -92,8 +92,8 @@ to generate ai image`)
           break;
         case "ai": case "openai": 
           try {
-            if (setting.keyopenai === "ISI_APIKEY_OPENAI_DISINI") return reply("Apikey belum diisi\n\nSilahkan isi terlebih dahulu apikeynya di file key.json\n\nApikeynya bisa dibuat di website: https://beta.openai.com/account/api-keys");
-            if (!text) return reply(`Chat With AI.\n\nContoh:\n${prefix}${command} Your Query`);
+            if (setting.keyopenai === "Enter Your OPEN AI API KEY HERE") return reply("Apikey has not been filled\n\nPlease fill in the apikey in the key.json file\n\nThe apikey can be made on the website: https://beta.openai.com/account/api-keys");
+            if (!text) return reply(`Chat With AI.\n\nExample:\n${prefix}${command} Your Query`);
             const configuration = new Configuration({
               apiKey: setting.keyopenai,
             });
@@ -111,13 +111,13 @@ to generate ai image`)
             m.reply(`${response.data.choices[0].text}`);
           } catch (err) {
             console.log(err);
-            m.reply("Maaf, sepertinya ada yang error :" + err);
+            m.reply("Sorry, there seems to be an error :" + err);
           }
           break;
         case "img": case "ai-img": case "image": case "images":
           try {
-            if (setting.keyopenai === "ISI_APIKEY_OPENAI_DISINI") return reply("Apikey belum diisi\n\nSilahkan isi terlebih dahulu apikeynya di file key.json\n\nApikeynya bisa dibuat di website: https://beta.openai.com/account/api-keys");
-            if (!text) return reply(`Create Image with Daale AI.\n\nContoh:\n${prefix}${command} Wooden house on snow mountain`);
+            if (setting.keyopenai === "Enter Your OPEN AI API KEY HERE") return reply("Apikey has not been filled\n\nPlease fill in the apikey in the key.json file\n\nThe apikey can be made on the website: https://beta.openai.com/account/api-keys");
+            if (!text) return reply(`Create Image with Daale AI.\n\nExample:\n${prefix}${command} Wooden house on snow mountain`);
             const configuration = new Configuration({
               apiKey: setting.keyopenai,
             });
@@ -131,7 +131,7 @@ to generate ai image`)
             client.sendImage(from, response.data.data[0].url, text, mek);
           } catch (err) {
             console.log(err);
-            m.reply("Maaf, sepertinya ada yang error :"+ err);
+            m.reply("Sorry, there seems to be an error :"+ err);
           }
           break;
         default: {
