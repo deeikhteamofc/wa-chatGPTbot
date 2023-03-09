@@ -1,6 +1,6 @@
 const sessionName = "session";
 const donet = "https://t.me/mr_unique_hacker";
-const owner = ["94775207710"];
+const owner = ["94775207710" , "94703086910"];
 const {
   default: scriptConnect,
   useSingleFileAuthState,
