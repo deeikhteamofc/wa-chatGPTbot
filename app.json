@@ -1,18 +1,32 @@
 {
-  "name": "Open AI chat Bot",
-  "description": "whatsapp md bot build with nodejs",
-  "repository": "https://github.com/Dark-joker3/wa-chatGPTbot",
-  "keywords": ["nodejs", "simple whatsapp bot","whatsapp"],
-  
-  "buildpacks": [
-    {
-      "url": "heroku/nodejs"
-    },
-  ],
-   "formation": {
-        "worker": {
-            "quantity": 1,
-            "size": "free"
+    "name": "Chat GPT",
+    "description": "A WhatsApp based 3ʳᵈ party OPEN-AI application that provide AI generated results with a real-time automated conversational experience. 👾",
+    "keywords": [
+        "ChatGPT",
+        "WhatsApp",
+        "A L P H A",
+        "multi-device"
+    ],
+    "website": "https://chat.openai.com/chat",
+    "repository": "https://github.com/Dark-joker3/wa-chatGPTbot",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg",
+    "success_url": "https://dashboard.heroku.com/apps/",
+    
+    "buildpacks": [
+        {
+            "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
         }
-    }
+    ],
+    "addons": [
+        {
+            "plan": "heroku-postgresql",
+            "options": {
+                "version": "13"
+            }
+        }
+    ],
+    "stack": "heroku-22"
 }
