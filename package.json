@@ -1,7 +1,7 @@
 {
   "name": "Wa-OpenAI",
   "version": "1.2.4",
-  "description": "WhatsApp Bot OpenAI Using Lib Baileys Multi Device",
+  "description": "A WhatsApp based 3ʳᵈ party OPEN-AI application that provide AI generated results with a real-time automated conversational experience. 👾",
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
