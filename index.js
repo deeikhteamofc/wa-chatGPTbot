@@ -16,7 +16,6 @@ const {
   proto,
   getContentType,
 } = require("@adiwajshing/baileys");
-const pino = require('pino')
 const { state, saveState } = useSingleFileAuthState(`./${sessionName}.json`);
 const pino = require("pino");
 const { Boom } = require("@hapi/boom");
