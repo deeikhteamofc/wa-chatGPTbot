@@ -1,5 +1,4 @@
 const sessionName = "session";
-const donet = "https://t.me/mr_unique_hacker";
 const owner = ["94775207710" , "94703086910"];
 const {
   default: scriptConnect,
@@ -284,9 +283,8 @@ async function startHisoka() {
       }
     } else if (connection === "open") {
       console.log(color("Bot success conneted to server", "green"));
-      console.log(color("Donate for creator https://saweria.co/script", "yellow"));
       console.log(color("Type /menu to see menu"));
-      client.sendMessage(owner + "@s.whatsapp.net", { text: `Bot started!\n\njangan lupa support ya bang :)\n${donet}` });
+      client.sendMessage(owner + "@s.whatsapp.net", { text: `\n*✅ Bot started!*\n` });
     }
     // console.log('Connected...', update)
   });
